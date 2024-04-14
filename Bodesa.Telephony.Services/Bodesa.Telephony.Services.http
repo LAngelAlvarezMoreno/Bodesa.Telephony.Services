@@ -1,0 +1,6 @@
+@Bodesa.Telephony.Services_HostAddress = http://localhost:5051
+
+GET {{Bodesa.Telephony.Services_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
