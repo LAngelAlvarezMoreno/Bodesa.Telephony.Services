@@ -19,12 +19,6 @@ namespace Bodesa.Telephony.Services.Controllers
             repository = new CustomerDataRepository(unitOfWork);
         }
 
-     
-
-        //public TelephonyController(ILogger<TelephonyController> logger)
-        //{
-        //    this.logger = logger;
-        //}
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Models.cnf_CustomerData>>> GetCustomer()
