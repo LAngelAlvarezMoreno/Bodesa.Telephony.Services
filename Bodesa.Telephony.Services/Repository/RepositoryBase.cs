@@ -1,13 +1,15 @@
 ﻿using Bodesa.Telephony.Services.Context;
 using Bodesa.Telephony.Services.UnitOfWork;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Bodesa.Telephony.Services.Repository
 {
-    public class RepositoryBase<T> : ControllerBase, IRepository<T>  where T: class 
+    public class RepositoryBase<T> : ControllerBase, IRepository<T> where T : class
     {
-        protected readonly DbContext context;
+        protected readonly ApplicationdbContext context;
         protected DbSet<T> dbSet;
         private readonly IUnitOfWork unitOfWork;
 

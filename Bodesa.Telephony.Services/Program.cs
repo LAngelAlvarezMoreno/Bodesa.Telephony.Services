@@ -3,6 +3,7 @@ using Bodesa.Telephony.Services.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
 var connectionString = builder.Configuration.GetConnectionString("dbConnection");
 builder.Services.AddDbContext<ApplicationdbContext>(options => options.UseSqlServer(connectionString));
 

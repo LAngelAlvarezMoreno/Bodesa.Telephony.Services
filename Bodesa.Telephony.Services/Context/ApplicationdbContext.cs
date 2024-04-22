@@ -10,18 +10,9 @@ namespace Bodesa.Telephony.Services.Context
 
         }
 
-        //protected readonly IConfiguration configuration;
-        //public ApplicationdbContext(IConfiguration _configuration)
-        //{
-        //    configuration = _configuration;
-        //}
+        public DbSet<Models.cnf_CustomerData> cnf_CustomerData { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //{
-        //    var connectionSting = configuration.GetConnectionString("dbConnection");
-        //    options.UseSqlServer(connectionSting);
-        //}
-
-        public DbSet<Models.cnf_CustomerData> CustomerData { get; set; }
+        public DbSet<Models.cnf_PhoneNumber> cnf_PhoneNumber { get; set; }
+     
     }
 }
